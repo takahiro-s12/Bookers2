@@ -17,7 +17,9 @@
           </tbody>
         </table>
         <div class="row">
-          <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_id" href="users/:id/edit"></a>
+          <%= link_to edit_user_path(@user.id) do %>
+            <div class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_id"></div>
+          <% end %>
         </div>
         <h1 class="mt-3">New book</h1>
         <%= form_with model:@book, url:'/books', local:true do |f| %>
